@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Fixed Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 10px 20px;
+  color: white;
+  z-index: 1000; /* Navbar hamesha top pe rahe */
+}
+
+.navbar .logo label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f1c40f;
+  letter-spacing: 2px;
+}
+
+body {
+  padding-top: 60px; /* Navbar ki height jitna space */
+}
+
+/* Default: Desktop View*/
+.menulinks {
+  display: block;
+}
+
+.menulinks ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.menulinks ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.menulinks ul li a:hover {
+  color: yellow;
+}
+
+/* Current Page Highlight */
+.menulinks ul li a.active {
+  color: yellow; 
+  font-weight: bold; 
+  position: relative;
+}
+
+/* Active link ke niche underline effect */
+.menulinks ul li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: yellow;
+}
+
+/* Mobile View: Hide Menu & Show Toggle Button */
+@media screen and (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /*Fix: Menu ko full width + fixed position do */
+  .menulinks {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    width: 100%;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    padding: 10px;
+    height: auto; 
+    z-index: 999; 
+  }
+
+  /*Menu jab open ho to dikhna chahiye */
+  .menulinks.show {
+    display: flex;
+  }
+
+  .menulinks ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/*Desktop View: Hide Toggle Button */
+@media screen and (min-width: 769px) {
+  .toggle-btn {
+    display: none;
+  }
+}
