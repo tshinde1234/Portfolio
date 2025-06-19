@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/CSS/home.css">
+
+    <script type="text/javascript">
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                const links = document.querySelectorAll('.navbar ul li a');
+                links.forEach(link => {
+                    if (link.href === window.location.href) {
+                        link.classList.add('active');
+                    }
+                });
+            })
+            .catch(err => console.error('Failed to load navbar:', err));
+    </script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="main_container">
+        <div class="aboutme">
+            <p class="greeting">HELLO!</p>
+            <h1>
+                I'm a <span class="highlight">Software Developer</span> based in Pune
+            </h1>
+        </div>
+        <div class="profile">
+            <div class="img">
+                <img src="" alt="">
+            </div>
+            <div class="info">
+                <table>
+                    <tr>
+                        <td>
+                            <h3>Name :</h3>
+                        </td>
+                        <td><label>Sumit Shete</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Birth Date :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                        </td>
+                        <td><label>16-12-2003</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Address :</h3>
+                        </td>
+                        <td><label> Wadgaon Sheri, Pune is 411014, India.</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Email :</h3>
+                        </td>
+                        <td><a href="mailto:shetesumit87@gmail.com">shetesumit87@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Phone :</h3>
+                        </td>
+                        <td><a href="tel:+91 9423507653">+91 9423507653</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Skills :</h3>
+                        </td>
+                        <td><label>JAVASCRIPT, MYSQL, HTML5, CSS3,<br> BOOTSTRAP5</label></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
