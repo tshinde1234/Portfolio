@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  /* background-image: url("../Images/horizontal/7.jpg"); */
+  background-size: 100% auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+/* .heading {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .heading h1 {
+    color: #f1c40f;
+    border-bottom: solid white;
+  } */
+
+.headline {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.headline h3 {
+  color: orange;
+}
+
+.main_container {
+  display: grid;
+  /* border: solid white; */
+  align-items: center;
+  grid-template-columns: 50% 40%;
+  grid-template-rows: auto auto;
+  margin: 20px 40px;
+  grid-column-gap: 5em;
+  grid-row-gap: 1.5em;
+  padding: 5px 10px;
+  /* background-color: yellowgreen; */
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.main_container .intro {
+  display: flex;
+  flex-direction: column;
+  /* border: solid white; */
+  /* background-color: rgb(36, 36, 36); */
+  /* background-color: rgba(45, 43, 43, 0.404); */
+  box-shadow: 0px 0px 5px 0px gray;
+  line-height: 1.5em;
+  padding: 10px;
+  /* height: 290px; */
+  border-radius: 5px;
+  /* box-shadow: 0px 0px 10px 0px white; */
+}
+
+.main_container .intro span {
+  font-size: larger;
+}
+
+.main_container .intro b {
+  color: yellow;
+}
+
+.main_container .table {
+  display: flex;
+  flex-direction: column;
+  /* border: solid white; */
+  /* background-color: rgb(36, 36, 36); */
+  /* background-color: rgba(45, 43, 43, 0.404); */
+  box-shadow: 0px 0px 5px 0px gray;
+  padding: auto auto;
+  /* height: 290px; */
+  line-height: 2em;
+  border-radius: 5px;
+}
+
+.main_container .table table {
+  margin: auto 30px;
+}
+
+.main_container .table {
+  padding: 10px 10px;
+  line-height: 1.8em;
+}
+
+.main_container .table a {
+  text-decoration: none;
+  color: white;
+}
+
+.main_container .table h3 {
+  color: #f1c40f;
+}
+
+.main_container .contact {
+  display: flex;
+  flex-direction: column;
+  /* border: solid white; */
+  /* background-color: rgb(36, 36, 36); */
+  box-shadow: 0px 0px 5px 0px gray;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  grid-column: 1 / -1;
+  margin: auto;
+  /* height: 60px; */
+  border-radius: 5px;
+}
+
+.main_container .contact button {
+  margin-top: 5px;
+  height: 30px;
+  width: 150px;
+  background-color: skyblue;
+  border: none;
+  border-radius: 15px;
+  color: black;
+  font-size: 16px;
+}
+
+.main_container .contact button:hover {
+  background-color: rgb(189, 82, 189);
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .main_container {
+    grid-template-columns: 50% 40%;
+    grid-column-gap: 5em;
+  }
+
+  .headline {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main_container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .main_container .intro,
+  .main_container .table {
+    height: auto;
+  }
+
+  .main_container .contact button {
+    width: 120px;
+    font-size: 14px;
+  }
+
+  .headline {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .headline h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .main_container {
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .main_container .contact button {
+    width: 100px;
+    font-size: 12px;
+  }
+
+  .headline h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .headline h3 {
+    font-size: 16px;
+  }
+
+  .main_container {
+    margin: 5px;
+    padding: 5px;
+    font-size: small;
+  }
+
+  .main_container .contact button {
+    width: 90px;
+    font-size: 12px;
+  }
+}
